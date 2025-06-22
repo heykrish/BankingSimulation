@@ -10,7 +10,7 @@ public class loan  {
     private boolean isActive;
     private int creditScore;
     private double dbr;//debt burden ration
-    private String customerId;
+    private final String customerId;
 
     public loan(double loanAmount,int tenure,String customerId){
         this.amount=loanAmount;
@@ -78,15 +78,15 @@ public class loan  {
     @Override
     public String toString() {
         return "loan{" +
-                "amount=" + amount +
+                "Amount=" + amount +
                 ", LAN='" + LAN + '\'' +
-                ", tenure=" + tenure +
+                ", Tenure=" + tenure +"months"+
                 ", EMI=" + EMI +
-                ", interest=" + interest +
-                ", isActive=" + isActive +
-                ", creditScore=" + creditScore +
-                ", dbr=" + dbr +
-                ", customerId='" + customerId + '\'' +
+                ", Interest=" + interest +"%"+
+                ", Status=" + (isActive?"Active":"Closed") +
+                ", Credit Score=" + creditScore +
+                ", Debt Burden Ratio=" + dbr +
+                ", Customer Id='" + customerId + '\'' +
                 '}';
     }
 }

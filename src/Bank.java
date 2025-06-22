@@ -84,10 +84,10 @@ public class Bank {
                     System.out.println("Enter your DBR (<50 get high chances for loan): ");
                     double dbr=scan.nextDouble();scan.nextLine();
                     if(bank.isEligibleForLoan(cscore,dbr)){
-                        System.out.println("Please provide the requested loan amount: ");
+                        System.out.println("Please provide the requested loan amount (maximum is 1lakh rupees)");
                         double amount=scan.nextDouble();
                         System.out.println("What tenure of loan are you looking for (in Years): ");
-                        int tenure=scan.nextInt();
+                        int tenure=scan.nextInt()*12;scan.nextLine();
                         System.out.println("Do you have account with our bank? ");
                         String answer= scan.nextLine();
                         loan loan;
@@ -163,7 +163,6 @@ public class Bank {
                                 break;
                             }
                             default:{
-
                                 System.out.println("Please provide valid input from the list!");
                             }
                         }
