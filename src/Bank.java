@@ -12,10 +12,10 @@ public class Bank {
         customerList=new ArrayList<>();
     }
 
-    public String isExistingCustomer(String Aadhar){
+    public String isExistingCustomer(String customerId){
         if(customerList !=null){
             for(Customer cust : customerList){
-                if(cust.getAadhaarNumber().equals(Aadhar)){
+                if(cust.getId().equals(customerId)){
                     return cust.getId();
                 };
             }
@@ -107,7 +107,9 @@ public class Bank {
                              loan=new loan(amount,tenure,customer.getId());
                              bank.customerList.add(customer);
                         }
+
                         bank.loanList.add(loan);
+                        bank.setLoanRelatedDetails(cscore,dbr,loan);
                         System.out.println("Congrats! Your loan has been approved!");
                         System.out.println(loan);
 

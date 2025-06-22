@@ -52,7 +52,7 @@ public class loan  {
 
     private void calculateEMI(double loanAmount, double interest, int tenure){
         double tobePaid=loanAmount+(loanAmount*interest*tenure/100);
-        this.EMI=tobePaid/tenure;
+        this.EMI=Math.floor(tobePaid/tenure);
     }
     public void generateLAN(){
         Random rand=new Random();
@@ -80,8 +80,8 @@ public class loan  {
         return "loan{" +
                 "Amount=" + amount +
                 ", LAN='" + LAN + '\'' +
-                ", Tenure=" + tenure +"months"+
-                ", EMI=" + EMI +
+                ", Tenure=" + tenure +" months"+
+                ", EMI=" + EMI +"/month"+
                 ", Interest=" + interest +"%"+
                 ", Status=" + (isActive?"Active":"Closed") +
                 ", Credit Score=" + creditScore +
