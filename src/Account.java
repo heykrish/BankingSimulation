@@ -31,11 +31,9 @@ public class Account  {
     }
     public void setAccountType(String accountType){
         if(accountType.equalsIgnoreCase("Business")){
-            this.Account_Type=Account_Type!=null?Account_Type: String.valueOf(genericContants.ACCOUNT_TYPE_BUSINESS);
-        }else if(accountType.equalsIgnoreCase("Loan")){
-            this.Account_Type=Account_Type!=null?Account_Type: String.valueOf(genericContants.ACCOUNT_TYPE_LOAN);
+            this.Account_Type=Account_Type!=null?Account_Type: String.valueOf(genericContants.BUSINESS);
         }else if(accountType.equalsIgnoreCase("SAVINGS")){
-            this.Account_Type=Account_Type!=null?Account_Type: String.valueOf(genericContants.ACCOUNT_TYPE_SAVINGS);
+            this.Account_Type=Account_Type!=null?Account_Type: String.valueOf(genericContants.SAVINGS);
         }else{
             System.out.println("Due to spelling mistake we're making it as savings account only!");
         }

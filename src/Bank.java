@@ -174,7 +174,6 @@ public class Bank {
                     break;
                 }
                 default:{
-
                     System.out.println("Invalid input, please provide input according to the main menu!");
                 }
             }
