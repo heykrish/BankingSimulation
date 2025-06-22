@@ -7,7 +7,7 @@ public class Account  {
     private final double madetoryBalance=3000;
     public boolean isAccountActive;
     private String Account_Type;
-    private String customerId;
+    private final String customerId;
 
     public Account(String Account_Type,Customer customer){
         this.balance=madetoryBalance;
@@ -65,7 +65,7 @@ public class Account  {
                 "Account No=" + AccountNo +
                 ", Account Holder Name='" + AccountName + '\'' +
                 ", Balance=" + balance +
-                ", Account status=" + isAccountActive +
+                ", Account status=" + (isAccountActive?"Active":"Closed") +
                 ", Customer Id='" + customerId + '\'' +
                 ", Account Type='" + Account_Type + '\'' +
                 '}';
